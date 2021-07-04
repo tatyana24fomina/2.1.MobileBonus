@@ -1,20 +1,22 @@
 public class Main {
     public static void main(String[] args) {
 
-        int minAmount = 100;
-        int everyAmountSpent = 50;
+        int minAmount = 200;
+        int everyAmountSpent = 100;
         int bonusInRubbles = 1;
 
-        int payment = 800;
-        int bonus = payment / everyAmountSpent * bonusInRubbles;
-        System.out.println(bonus);
+        int payment = 1300;
+        int bonus = 0;
 
         int totalAmount;
-        if (payment > 500) {
-            totalAmount = minAmount + payment + payment / everyAmountSpent * bonusInRubbles;
+        if (payment > 1000) {
+            bonus = (payment / everyAmountSpent) * bonusInRubbles;
+            totalAmount = minAmount + payment + bonus;
         } else {
             totalAmount = minAmount + payment;
         }
+        System.out.println(bonus);
         System.out.println(totalAmount);
+
     }
 }
